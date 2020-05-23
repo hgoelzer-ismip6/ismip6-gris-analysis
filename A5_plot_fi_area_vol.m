@@ -1,5 +1,7 @@
 % plot ISMIP6 results
 
+startup
+
 clear
 
 load diag_fi_A5.mat

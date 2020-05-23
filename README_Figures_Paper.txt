@@ -1,4 +1,5 @@
 % Figures for paper ISMIP6-Greenland
+Goelzer, H., Nowicki, S., Payne, A., Larour, E., Seroussi, H., Lipscomb, W. H., Gregory, J., Abe-Ouchi, A., Shepherd, A., Simon, E., Agosta, C., Alexander, P., Aschwanden, A., Barthel, A., Calov, R., Chambers, C., Choi, Y., Cuzzone, J., Dumas, C., Edwards, T., Felikson, D., Fettweis, X., Golledge, N. R., Greve, R., Humbert, A., Huybrechts, P., Le clec'h, S., Lee, V., Leguy, G., Little, C., Lowry, D. P., Morlighem, M., Nias, I., Quiquet, A., Rückamp, M., Schlegel, N.-J., Slater, D., Smith, R., Straneo, F., Tarasov, L., van de Wal, R., and van den Broeke, M.: The future sea-level contribution of the Greenland ice sheet: a multi-model ensemble study of ISMIP6, The Cryosphere Discuss., https://doi.org/10.5194/tc-2019-319, in review, 2020.
 
 % Define ensemble
 define_set
@@ -210,14 +211,3 @@ for i=1:21; res_ctr(i)=(resc.ctrl_proj{i}.sle(end)-resc.ctrl_proj{i}.sle(1))*-10
 minmax(res_ctr)
 minmax(res_e05)
 
-[-14.8   20.4]
-[ 57.2  139.1]
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Unused
-
-% Partitioning
-A5_bar_partition_split.m
---> A5_bar_partition_split_exp05.png

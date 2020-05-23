@@ -23,16 +23,16 @@ fi = 'tex';
 fs = 7;
 
 
-%load ../numcr_basinR_A5.mat
-%modsel = [25]
-%for i=1:length(scenarios),
-%    eval([ 'm = numcr_bas.' expnames{i} ';' ]);
-%    for j=1:6,
-%        a(i,j) = -mean((m(modsel,j)))*1000; % SLE in mm
-%    end
-%end
-%save attribution_ogr a
-load attribution_ogr
+load ../numcr_basinR_A5.mat
+modsel = [25]
+for i=1:length(scenarios),
+    eval([ 'm = numcr_bas.' expnames{i} ';' ]);
+    for j=1:6,
+        a(i,j) = -mean((m(modsel,j)))*1000; % SLE in mm
+    end
+end
+save attribution_ogr a
+%load attribution_ogr
 
 figure(1);
 for i=1:size(a,2),

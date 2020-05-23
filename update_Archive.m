@@ -30,8 +30,13 @@ load_data_numcr_basinR_A5
 load_data_numcr_A5_ext
 load_data_numcr_basinR_A5_ext
 
+% Masks
+A5_fi_icemasks.m
+
 % Extract Diag
 A5_Diag_fi_obs1
+
+A5_Diag_ff
 
 % Numbers for uncertainty part
 A5_stats_ext

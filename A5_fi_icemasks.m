@@ -60,7 +60,7 @@ contour(zmask',[0.5,0.5],'k','Linewidth',1)
 %title(['icemask init A5'])
 cb = colorbar;
 set(cb,'Ytick',[0:ln])
-lt=text(352,-20,'#','Interpreter','Tex','FontSize',14,'VerticalAlignment','middle')
+lt=text(352,-20,'#','Interpreter','Tex','FontSize',14,'VerticalAlignment','middle');
 
 print('-r300','-dpng', 'Figures/A5_fi_init_mimm' );
 
