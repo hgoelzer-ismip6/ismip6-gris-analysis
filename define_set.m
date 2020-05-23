@@ -1,0 +1,41 @@
+% define set of models to operate on
+clear
+
+%% Dec 1st
+%igrp = {'AWI','AWI','AWI','BGC','GSFC','ILTS_PIK','ILTS_PIK','IMAU','IMAU','JPL','JPL','LSCE','MUN','MUN','NCAR','UAF','UCIJPL','ISMIP6','ISMIP6','ISMIP6','ISMIP6'};
+%imod = {'ISSM1','ISSM2','ISSM3','BISICLES','ISSM','SICOPOLIS2','SICOPOLIS3','IMAUICE1','IMAUICE2','ISSM','ISSMPALEO','GRISLI2','GSM2601','GSM2611','CISM','PISM1','ISSM1','NOISM_adog','NOISM_adg' ,'NOISM_ag','NOISM_og'};
+
+%% Dec 2nd
+%igrp = {'AWI','AWI','AWI','BGC','GSFC','ILTS_PIK','ILTS_PIK','IMAU','IMAU','JPL','JPL','LSCE','MUN','MUN','NCAR','UAF','UCIJPL','VUB','ISMIP6','ISMIP6','ISMIP6','ISMIP6'};
+%imod = {'ISSM1','ISSM2','ISSM3','BISICLES','ISSM','SICOPOLIS2','SICOPOLIS3','IMAUICE1','IMAUICE2','ISSM','ISSMPALEO','GRISLI2','GSM2601','GSM2611','CISM','PISM1','ISSM1','GISMSIAv3','NOISM_adog','NOISM_adg' ,'NOISM_ag','NOISM_og'};
+
+%% Dec 4nd
+%igrp = {'AWI','AWI','AWI','BGC','GSFC','ILTS_PIK','ILTS_PIK','IMAU','IMAU','JPL','JPL','LSCE','MUN','MUN','NCAR','UAF','UCIJPL','VUB','VUW','ISMIP6','ISMIP6','ISMIP6','ISMIP6'};
+%imod = {'ISSM1','ISSM2','ISSM3','BISICLES','ISSM','SICOPOLIS2','SICOPOLIS3','IMAUICE1','IMAUICE2','ISSM','ISSMPALEO','GRISLI2','GSM2601','GSM2611','CISM','PISM1','ISSM1','GISMSIAv3','PISM','NOISM_adog','NOISM_adg' ,'NOISM_ag','NOISM_og'};
+
+%%% Dec 5nd
+%igrp = {'AWI','AWI','AWI','BGC','GSFC','ILTS_PIK','ILTS_PIK','IMAU','IMAU','JPL','JPL','LSCE','MUN','MUN','NCAR','UAF','UAF','UCIJPL','UCIJPL','VUB','VUW','ISMIP6','ISMIP6','ISMIP6','ISMIP6'};
+%imod = {'ISSM1','ISSM2','ISSM3','BISICLES','ISSM','SICOPOLIS2','SICOPOLIS3','IMAUICE1','IMAUICE2','ISSM','ISSMPALEO','GRISLI2','GSM2601','GSM2611','CISM','PISM1','PISM2','ISSM1','ISSM2','GISMSIAv3','PISM','NOISM_adog','NOISM_adg' ,'NOISM_ag','NOISM_og'};
+%% Model names for paper
+%papmod = {'ISSM1','ISSM2','ISSM3','BISICLES','ISSM','SICOPOLIS1','SICOPOLIS2','IMAUICE1','IMAUICE2','ISSM','ISSMPALEO','GRISLI','GSM1','GSM2','CISM','PISM1','PISM2','ISSM1','ISSM2','GISMSIA','PISM','NOISM','NOISM_adg' ,'NOISM_ag','NOISM_og'};
+
+%% Final setup May 14 2020
+igrp = {'AWI','AWI','AWI','BGC','GSFC','ILTS_PIK','ILTS_PIK','IMAU','IMAU','JPL','JPL','LSCE','MUN','MUN','NCAR','UAF','UAF','UCIJPL','UCIJPL','VUB','VUW','ISMIP6','ISMIP6','ISMIP6','ISMIP6'};
+imod = {'ISSM1','ISSM2','ISSM3','BISICLES','ISSM','SICOPOLIS2','SICOPOLIS3','IMAUICE1','IMAUICE2','ISSM','ISSMPALEO','GRISLI2','GSM2601','GSM2611','CISM','PISM1','PISM2','ISSM1','ISSM2','GISMHOMv1','PISM','NOISM_adog','NOISM_adg' ,'NOISM_ag','NOISM_og'};
+% Model names for paper
+papmod = {'ISSM1','ISSM2','ISSM3','BISICLES','ISSM','SICOPOLIS1','SICOPOLIS2','IMAUICE1','IMAUICE2','ISSM','ISSMPALEO','GRISLI','GSM1','GSM2','CISM','PISM1','PISM2','ISSM1','ISSM2','GISM','PISM','NOISM','NOISM_adg' ,'NOISM_ag','NOISM_og'};
+
+
+igrpmod={};
+for i=1:length(igrp)
+    igrpmod{i}=[igrp{i},'-' , imod{i}];
+end
+
+papgrpmod={};
+for i=1:length(igrp)
+    papgrpmod{i}=[igrp{i},'-' , papmod{i}];
+end
+papgrpmod=strrep(papgrpmod,'_','');
+
+save set_default.mat igrp imod igrpmod papmod papgrpmod
+
