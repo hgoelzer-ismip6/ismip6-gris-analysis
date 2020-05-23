@@ -57,7 +57,7 @@ meta_plot_forcing_aSMB_paper.m
 A5_shade_asmb.m
 --> A5_shade_asmb_exp05.png
 % ocean forcing
-Donald/retreatplot
+Ocean/retreatplot
 -->retreat_GrIS_wide.png
 % Combine  
 
